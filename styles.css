@@ -1,0 +1,273 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    position: absolute; /* Keep it floating over hero */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it does not exceed screen width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%; /* Use percentage padding to prevent overflow */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 10;
+    box-sizing: border-box; /* Ensures padding doesn’t increase width */
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff88;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ff88;
+}
+
+
+
+.cart {
+    background-color: #00ff88;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #000;
+}
+
+.cart:hover {
+    background-color: #00cc66;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    color: #ffffff;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 80px; /* Push content down so it doesn't overlap the header */
+}
+
+/* Background Image Slider */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Stretch to cover entire hero */
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundSlider 8s infinite linear;
+    z-index: -1;
+}
+
+/* Keyframes for Changing Background Images */
+@keyframes backgroundSlider {
+    0% { background-image: url('image1.webp'); }
+    25% { background-image: url('image2.webp'); }
+    50% { background-image: url('image3.webp'); }
+    75% { background-image: url('image1.webp'); }
+    100% { background-image: url('image2.webp'); }
+}
+
+/* Styling the text and button */
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00ff88;
+    padding: 12px 24px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #00cc66;
+}
+
+/* CTA Section (Between Hero & Products) */
+.cta-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #0f291e; /* Dark green background */
+    color: #ffffff;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* General Button Styles */
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px; /* More curled edges */
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: transparent; /* Makes it see-through */
+}
+
+/* Shop Now Button (Transparent with Green Border) */
+.btn {
+    color: #00ff88;
+    border-color: #00ff88; /* Green border */
+}
+
+.btn:hover {
+    background: rgba(0, 255, 136, 0.2); /* Light green tint on hover */
+    transform: scale(1.08); /* Slight zoom */
+    box-shadow: 0px 4px 10px rgba(0, 255, 136, 0.5); /* Glow effect */
+}
+
+/* Sell Now Button (Transparent with Orange Border) */
+.btn-secondary {
+    color: #ffaa00;
+    border-color: #ffaa00; /* Orange border */
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 170, 0, 0.2); /* Light orange tint on hover */
+    transform: scale(1.08);
+    box-shadow: 0px 4px 10px rgba(255, 170, 0, 0.5);
+}
+
+/* Categories Section */
+/* Categories Section */
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0; /* No extra spacing */
+    width: 100%;
+    height: 60vh; /* Adjust height as needed */
+}
+
+.category {
+    flex: 1; /* Equal width for all three sections */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: transform 0.5s ease, filter 0.5s ease; /* Smooth transition */
+}
+
+/* Hover Effect: Slight Zoom and Brightness */
+.category:hover {
+    transform: scale(1.05); /* Zoom in */
+    filter: brightness(1.2); /* Increase brightness */
+}
+
+/* Category Button (Inside Image, Bottom Left) */
+.category-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px; /* Curved edges */
+    transition: all 0.3s ease-in-out;
+    border: 2px solid white;
+    cursor: pointer;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white;
+}
+
+.category-btn:hover {
+    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    color: #fff;
+    transform: scale(1.08);
+}
+
+
+/* Category Button (Inside Image, Bottom Left) */
+.category-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px; /* Curved edges */
+    transition: all 0.3s ease-in-out;
+    border: 2px solid white;
+    cursor: pointer;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white;
+}
+
+.category-btn:hover {
+    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    color: #fff;
+    transform: scale(1.08);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0a3d20;
+    margin-top: 30px;
+}
