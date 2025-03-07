@@ -9,24 +9,40 @@ body {
 
 /* Header */
 header {
-    position: absolute; /* Keep it floating over hero */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Ensure it does not exceed screen width */
+    width: 100%;
+    height: 80px; /* Fixed height to prevent expansion */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%; /* Use percentage padding to prevent overflow */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    align-items: center; /* Center items vertically */
+    padding: 0 5%; /* Adjust padding */
+    background: rgba(122, 122, 122, 0.2);
     z-index: 10;
-    box-sizing: border-box; /* Ensures padding doesn’t increase width */
+    box-sizing: border-box;
 }
 
-/* Logo */
+/* Wrap everything inside a container */
+/* Adjust container layout */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+/* Logo stays on the extreme left */
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00ff88;
+    position: absolute;
+    left: 0px; /* Small padding from the left */
+}
+
+/* Navigation centered */
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center menu */
 }
 
 /* Navigation Menu */
@@ -35,35 +51,97 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-    margin: 0 15px;
+/* Login & Sign Up buttons (rightmost corner) */
+.auth-buttons {
+    position: absolute;
+    right: 0px; /* Align to the rightmost corner */
+    display: flex;
+    gap: 15px; /* Space between buttons */
+}
+
+/* Button styles */
+.auth-buttons a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Login Button */
+.btn-login {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    background: transparent;
+}
+
+.btn-login:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Sign Up Button */
+.btn-signup {
+    color: #000;
+    background: #00ff88;
+    border: 2px solid #00ff88;
+}
+
+.btn-signup:hover {
+    background: #00cc66;
+    transform: scale(1.1);
+}
+
+/* Logo stays on the extreme left */
+.logo {
+    position: absolute;
+    left: 0;
+    padding-left: 20px; /* Adjust if needed */
+}
+
+/* Logo Image */
+.logo img {
+    max-height: 60px; /* Adjust logo size */
+    width: auto;
+}
+
+/* Navigation centered */
+nav {
+    flex: 1; /* Takes available space */
+    display: flex;
+    justify-content: center; /* Centers menu */
+}
+
+/* Navigation Menu */
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Adds spacing between menu items */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #ffffff;
     font-size: 16px;
-    transition: 0.3s;
+    font-weight: normal; /* Default font weight */
+    transition: all 0.3s ease-in-out;
 }
 
+/* Hover Effect: Bold and Larger */
 nav ul li a:hover {
-    color: #00ff88;
+    color: #006135; /* Change color on hover */
+    font-size: 18px; /* Increase size */
+    font-weight: bold; /* Make it bold */
+    transform: scale(1.1); /* Slight zoom effect */
 }
 
-
-
-.cart {
-    background-color: #00ff88;
-    padding: 8px 12px;
-    border-radius: 5px;
-    color: #000;
-}
-
-.cart:hover {
-    background-color: #00cc66;
-}
 
 /* Hero Section */
 .hero {
