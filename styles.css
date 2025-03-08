@@ -360,52 +360,37 @@ footer {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
-}
-
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Apply the font globally */
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Dropdown Container */
-.dropdown {
-    position: relative;
-    display: inline-block;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    cursor: pointer;
+    justify-content: flex-start; /* Aligns to the left */
 }
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: rgba(0, 255, 136, 0.8); /* Semi-transparent green */
-    color: #000;
-    padding: 12px 20px;
+    background: none; /* No background */
+    color: #ffffff;
+    padding: 10px 15px;
     font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
+    font-weight: normal; /* No bold */
+    border: none; /* No border */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-/* Hover effect for Dropdown Button */
 .dropbtn:hover {
-    background-color: rgba(0, 255, 136, 1); /* Fully opaque on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    color: #00ff88;
 }
 
 /* Dropdown Content */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(34, 34, 34, 0.9); /* Dark semi-transparent background */
-    min-width: 200px;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    background-color: #1a1a1a; /* Darker background */
+    padding: 12px;
+    min-width: 180px;
     z-index: 1;
-    margin-top: 10px; /* Space between button and dropdown */
 }
 
 /* Show Dropdown Content on Hover */
@@ -413,82 +398,70 @@ body {
     display: block;
 }
 
-/* Dropdown Items */
+/* Labels inside the dropdown */
 .dropdown-content label {
     color: #ffffff;
     font-size: 14px;
-    font-weight: bold;
-    margin-top: 10px;
+    font-weight: normal; /* No bold */
+    display: block;
+    margin-top: 8px;
 }
 
-/* Dropdown Select and Range Input */
+/* Filter Inputs */
 .dropdown-content select,
 .dropdown-content input[type="range"] {
     width: 100%;
-    margin-top: 5px;
-    padding: 8px;
+    padding: 6px;
     border: none;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    background-color: #333;
     color: #ffffff;
     font-size: 14px;
-    appearance: none; /* Remove default arrow */
+    outline: none;
     cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content select:hover,
+.dropdown-content input[type="range"]:hover {
+    background: #444;
 }
 
 /* Apply Button */
 .apply-btn {
-    margin-top: 15px;
-    padding: 10px;
+    margin-top: 10px;
+    padding: 8px 12px;
     width: 100%;
-    background-color: #00ff88;
-    color: #000000;
-    border: none;
-    border-radius: 4px;
+    background: none; /* No background */
+    color: #ffffff;
+    border: none; /* No border */
     font-size: 16px;
-    font-weight: bold;
+    font-weight: normal; /* No bold */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .apply-btn:hover {
-    background-color: #00cc66;
+    color: #00ff88;
 }
 
 /* Sort Dropdown */
 #sort-dropdown {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #232323;
+    font-weight: normal; /* No bold */
+    border: none; /* No border */
+    background: none; /* No background */
     color: white;
-    margin-left: 15px; /* Space between filter and sort dropdowns */
+    outline: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#sort-dropdown:hover {
+    color: #00ff88;
 }
 
 
-
-/* Filter Select & Slider */
-.dropdown-content select,
-.dropdown-content input[type="range"] {
-    width: 100%;
-    margin-top: 5px;
-    padding: 5px;
-    border: none;
-    border-radius: 3px;
-    background: #333;
-    color: white;
-}
-
-/* Sort Dropdown */
-#sort-dropdown {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #232323;
-    color: white;
-}
 
 /* Header */
 header {
