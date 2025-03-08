@@ -23,7 +23,6 @@ header {
 }
 
 /* Wrap everything inside a container */
-/* Adjust container layout */
 header .container {
     display: flex;
     align-items: center;
@@ -35,14 +34,20 @@ header .container {
 /* Logo stays on the extreme left */
 .logo {
     position: absolute;
-    left: 0px; /* Small padding from the left */
+    left: 20px; /* Padding from the left */
+}
+
+/* Logo Image */
+.logo img {
+    max-height: 60px;
+    width: auto;
 }
 
 /* Navigation centered */
 nav {
     flex: 1;
     display: flex;
-    justify-content: center; /* Center menu */
+    justify-content: center; /* Centers menu */
 }
 
 /* Navigation Menu */
@@ -54,12 +59,29 @@ nav ul {
     gap: 20px;
 }
 
+/* Navigation links */
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect: Bold and Larger */
+nav ul li a:hover {
+    color: #006135;
+    font-size: 18px;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
 /* Login & Sign Up buttons (rightmost corner) */
 .auth-buttons {
     position: absolute;
-    right: 0px; /* Align to the rightmost corner */
+    right: 20px;
     display: flex;
-    gap: 15px; /* Space between buttons */
+    gap: 15px;
 }
 
 /* Button styles */
@@ -95,6 +117,7 @@ nav ul {
     background: #00cc66;
     transform: scale(1.1);
 }
+
 
 /* Logo stays on the extreme left */
 .logo {
@@ -266,7 +289,6 @@ nav ul li a:hover {
 }
 
 /* Categories Section */
-/* Categories Section */
 .categories {
     display: flex;
     justify-content: center;
@@ -348,4 +370,212 @@ footer {
     padding: 15px;
     background-color: #0a3d20;
     margin-top: 30px;
+}
+
+/* Shop Page Layout */
+.shop-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 5%;
+}
+
+/* Filter & Sort Section */
+.filter-sort {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply the font globally */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: rgba(0, 255, 136, 0.8); /* Semi-transparent green */
+    color: #000;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for Dropdown Button */
+.dropbtn:hover {
+    background-color: rgba(0, 255, 136, 1); /* Fully opaque on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(34, 34, 34, 0.9); /* Dark semi-transparent background */
+    min-width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    z-index: 1;
+    margin-top: 10px; /* Space between button and dropdown */
+}
+
+/* Show Dropdown Content on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown Items */
+.dropdown-content label {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Dropdown Select and Range Input */
+.dropdown-content select,
+.dropdown-content input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    color: #ffffff;
+    font-size: 14px;
+    appearance: none; /* Remove default arrow */
+    cursor: pointer;
+}
+
+/* Apply Button */
+.apply-btn {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: #00ff88;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #00cc66;
+}
+
+/* Sort Dropdown */
+#sort-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #232323;
+    color: white;
+    margin-left: 15px; /* Space between filter and sort dropdowns */
+}
+
+
+
+/* Filter Select & Slider */
+.dropdown-content select,
+.dropdown-content input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    background: #333;
+    color: white;
+}
+
+/* Sort Dropdown */
+#sort-dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #232323;
+    color: white;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    background: rgba(122, 122, 122, 0.2);
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* Wrap everything inside a container */
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+/* Cart & Wishlist */
+.cart-wishlist {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.cart-wishlist a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Cart Button */
+.cart-btn {
+    background: #00ff88;
+    color: black;
+    border: 2px solid #00ff88;
+}
+
+.cart-btn:hover {
+    background: #00cc66;
+    transform: scale(1.1);
+}
+
+/* Wishlist Button */
+.wishlist-btn {
+    background: #ff4455;
+    color: white;
+    border: 2px solid #ff4455;
+}
+
+.wishlist-btn:hover {
+    background: #cc2233;
+    transform: scale(1.1);
 }
