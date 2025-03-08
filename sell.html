@@ -30,21 +30,45 @@
         <h2>Sell Your Product</h2>
         <p>Fill in the details below to list your product on EcoTots.</p>
 
-        <form action="submit_product.php" method="POST" enctype="multipart/form-data" class="sell-form">
-            <label for="product-images">Upload Images (Max 4):</label>
-            <input type="file" id="product-images" name="product-images[]" accept="image/*" multiple required>
+        <div class="sell-form-container">
+            <!-- Left Section: Image Upload Grid -->
+            <div class="image-upload-section">
+                <div class="image-grid">
+                    <div class="upload-box" onclick="document.getElementById('file-upload-1').click()">
+                        <input type="file" id="file-upload-1" name="product-images[]" accept="image/*" hidden>
+                        <span>+</span>
+                    </div>
+                    <div class="upload-box" onclick="document.getElementById('file-upload-2').click()">
+                        <input type="file" id="file-upload-2" name="product-images[]" accept="image/*" hidden>
+                        <span>+</span>
+                    </div>
+                    <div class="upload-box" onclick="document.getElementById('file-upload-3').click()">
+                        <input type="file" id="file-upload-3" name="product-images[]" accept="image/*" hidden>
+                        <span>+</span>
+                    </div>
+                    <div class="upload-box" onclick="document.getElementById('file-upload-4').click()">
+                        <input type="file" id="file-upload-4" name="product-images[]" accept="image/*" hidden>
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
 
-            <label for="product-price">Price (in USD):</label>
-            <input type="number" id="product-price" name="product-price" min="1" required>
+            <!-- Right Section: Product Form -->
+            <div class="product-details-section">
+                <form action="submit_product.php" method="POST" class="sell-form">
+                    <label for="product-price">Price (in USD):</label>
+                    <input type="number" id="product-price" name="product-price" min="1" required>
 
-            <label for="product-materials">Materials Used:</label>
-            <input type="text" id="product-materials" name="product-materials" placeholder="e.g. Organic Cotton, Recycled Wood" required>
+                    <label for="product-materials">Materials Used:</label>
+                    <input type="text" id="product-materials" name="product-materials" placeholder="e.g. Organic Cotton, Recycled Wood" required>
 
-            <label for="product-details">Product Details:</label>
-            <textarea id="product-details" name="product-details" rows="5" placeholder="Provide additional details about your product..." required></textarea>
+                    <label for="product-details">Product Details:</label>
+                    <textarea id="product-details" name="product-details" rows="5" placeholder="Provide additional details about your product..." required></textarea>
 
-            <button type="submit" class="btn">Submit</button>
-        </form>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <!-- FOOTER -->

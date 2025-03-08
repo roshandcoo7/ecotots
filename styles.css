@@ -630,57 +630,141 @@ header .container {
     filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.6));
 }
 
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
 
-/* Sell Page Container */
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    background: rgba(122, 122, 122, 0.2);
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+/* Sell Container */
 .sell-container {
-    max-width: 600px;
-    margin: 100px auto;
+    max-width: 900px;
+    margin: 120px auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sell Form Layout */
+.sell-form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    border-top: 2px solid white;
+    padding-top: 20px;
+}
+
+/* Left: Image Upload Section */
+.image-upload-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.upload-box {
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
     text-align: center;
 }
 
-/* Form Styling */
+/* Right: Product Details Form */
+.product-details-section {
+    width: 50%;
+}
+
 .sell-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+    text-align: left;
 }
 
 .sell-form label {
     font-weight: bold;
     color: #ffffff;
-    text-align: left;
 }
 
 .sell-form input, 
 .sell-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     font-size: 16px;
     border: 1px solid #ccc;
     background: #333;
     color: white;
-    border-radius: 5px;
 }
 
-.sell-form textarea {
-    resize: vertical;
-}
-
+/* Submit Button */
 .sell-form button {
     background: #00ff88;
     color: #000;
     font-size: 18px;
     font-weight: bold;
-    padding: 12px;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
 
 .sell-form button:hover {
     background: #00cc66;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0a3d20;
+    margin-top: 30px;
 }
