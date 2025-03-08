@@ -631,3 +631,56 @@ header .container {
 }
 
 
+/* Sell Page Container */
+.sell-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Form Styling */
+.sell-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sell-form label {
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+}
+
+.sell-form input, 
+.sell-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+.sell-form textarea {
+    resize: vertical;
+}
+
+.sell-form button {
+    background: #00ff88;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.sell-form button:hover {
+    background: #00cc66;
+}
