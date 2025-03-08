@@ -580,43 +580,81 @@ header .container {
     transform: scale(1.1);
 }
 
+/* Product Grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Wider product cards */
     gap: 20px;
 }
 
+/* Product Card */
 .product {
     background-color: #1e1e1e;
-    padding: 10px;
-    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
     text-align: center;
+    padding: 0;
+    height: 400px; /* Rectangular height */
+    border-radius: 0; /* No curves */
 }
 
+/* Product Image */
 .product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height to fill rectangle */
+    object-fit: cover; /* Ensures full coverage without distortion */
 }
 
-.product h4 {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-.product p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
+/* Hide details by default */
+.product h4,
+.product p,
 .product-actions {
-    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay for visibility */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(100%); /* Move it down initially */
+    transition: all 0.3s ease-in-out;
 }
 
+/* Show details on hover */
+.product:hover h4,
+.product:hover p,
+.product:hover .product-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Product Actions (Wishlist & Cart) */
+.product-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Button Styles */
 .product-actions .wishlist-btn,
 .product-actions .cart-btn {
-    margin: 5px;
+    background: none;
+    border: 2px solid white;
+    color: white;
     padding: 8px 12px;
     font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-actions .wishlist-btn:hover {
+    background: red;
+    border-color: red;
+}
+
+.product-actions .cart-btn:hover {
+    background: green;
+    border-color: green;
 }
 
