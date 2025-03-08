@@ -579,3 +579,44 @@ header .container {
     background: #cc2233;
     transform: scale(1.1);
 }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product h4 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.product p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.product-actions {
+    margin-top: 10px;
+}
+
+.product-actions .wishlist-btn,
+.product-actions .cart-btn {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
